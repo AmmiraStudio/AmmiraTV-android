@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 11+: lets the app see whether an OpenVPN client is installed and who opens .ovpn -->
+    <queries>
+        <package android:name="de.blinkt.openvpn" />
+        <package android:name="net.openvpn.openvpn" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="application/x-openvpn-profile" />
+        </intent>
+    </queries>
+
+    <application>
+        <!-- Hands a generated .ovpn file to the OpenVPN app without exposing app storage -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.vpnfiles"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/vpn_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

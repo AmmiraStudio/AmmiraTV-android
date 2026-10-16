@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AmmiraTv" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Black from the very first frame (pre-Android 12 launch window) -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">#FF0A0A0C</item>
+        <item name="android:statusBarColor">#FF0A0A0C</item>
+        <item name="android:navigationBarColor">#FF0A0A0C</item>
+    </style>
+</resources>
+

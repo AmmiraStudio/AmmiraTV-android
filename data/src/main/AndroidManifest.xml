@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Keeps the process alive while a recording is being written -->
+        <service
+            android:name="com.ammiratv.data.recording.RecordingService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- Fires the "programme starts soon" notification -->
+        <receiver
+            android:name="com.ammiratv.data.reminder.ReminderReceiver"
+            android:exported="false" />
+    </application>
+
+</manifest>

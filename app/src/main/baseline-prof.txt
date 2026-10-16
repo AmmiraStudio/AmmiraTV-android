@@ -1,0 +1,4 @@
+# Compile the app's own classes ahead of time: cold start and first scroll are much faster
+# on weak devices, where the JIT would otherwise interpret them for the first minutes.
+HSPLcom/ammiratv/**;->**(**)**
+Lcom/ammiratv/**;
